@@ -1,0 +1,33 @@
+﻿@page
+@model LoanCalculatorModel
+@{
+    ViewData["Title"] = "Loan Calculator";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(x => x.LoanAmount)
+        @Html.EditorFor(x => x.LoanAmount)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.InterestRate)
+        @Html.EditorFor(x => x.InterestRate)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.LoanPeriod)
+        @Html.EditorFor(x => x.LoanPeriod)
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(x => x.StartDate)
+        @Html.EditorFor(x => x.StartDate, new { @class = "form-control", Attributes = new { DateFormat = "yyyy/MM/dd" } })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.InterestType)
+        @Html.EditorFor(x => x.InterestType)
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Calculate" class="btn btn-primary" />
+    </div>
+}

@@ -1,0 +1,51 @@
+﻿@page
+@model LoanCalculator.Pages.LoanCalculatorModel
+@{
+}
+// LoanCalculator.cshtml
+
+using System.Reflection.Emit;
+
+<script src="~/js/LoanCalculator.js"></script>
+
+<div class= "container" >
+    < h1 > Loan Calculator </ h1 >
+
+    < div class= "form-group" >
+        < label for= "loanAmount" > Loan Amount </ label >
+        < input type = "number" class= "form-control" id = "loanAmount" value = "@Model.LoanAmount" />
+    </ div >
+
+    < div class= "form-group" >
+        < label for= "interestRate" > Interest Rate </ label >
+        < input type = "number" class= "form-control" id = "interestRate" value = "@Model.InterestRate" />
+    </ div >
+
+    < div class= "form-group" >
+        < label for= "loanPeriod" > Loan Period </ label >
+        < input type = "number" class= "form-control" id = "loanPeriod" value = "@Model.LoanPeriod" />
+    </div>
+
+    <div class= "form-group" >
+        < label for= "paymentFrequency" > Payment Frequency </ label >
+        < select class= "form-control" id = "paymentFrequency" >
+            < option value = "Annually" > Annually </ option >
+            < option value = "Quarterly" > Quarterly </ option >
+            < option value = "Monthly" > Monthly </ option >
+        </ select >
+    </div>
+
+    <div class= "form-group" >
+        < button type = "button" class= "btn btn-primary" id = "calculate" > Calculate </ button >
+    </div >
+
+    < div class= "form-group" >
+        < h4 > Monthly Payment </ h4 >
+        < input type = "number" class= "form-control" id = "monthlyPayment" readonly />
+    </ div >
+
+    < div class= "form-group" >
+        < h4 > Total Interest </ h4 >
+        < input type = "number" class= "form-control" id = "totalInterest" readonly />
+    </ div >
+</ div >

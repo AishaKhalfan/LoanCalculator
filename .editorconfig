@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS0649: Field 'HomeController._context' is never assigned to, and will always have its default value null
+dotnet_diagnostic.CS0649.severity = suggestion
